@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="Mytest-20220426101831" tests="2" file=".py" time="0.513" timestamp="2022-04-26T10:18:31" failures="1" errors="0" skipped="0">
+		<testcase classname="Mytest" name="test_api_1_test_case" time="0.511" timestamp="2022-04-26T10:18:31" file="test_case.py" line="10">
+			<!--test_api_1_test_case-->
+		</testcase>
+		<testcase classname="Mytest" name="test_api_2_test_case2" time="0.002" timestamp="2022-04-26T10:18:31" file="test_case.py" line="10">
+			<!--test_api_2_test_case2-->
+			<failure type="AssertionError" message="'hello' not found in ''"><![CDATA[Traceback (most recent call last):
+  File "C:\Python3\lib\site-packages\ddt.py", line 191, in wrapper
+    return func(self, *args, **kwargs)
+  File "test_case.py", line 35, in test_api
+    self.assertIn(assert_text,resp)
+AssertionError: 'hello' not found in ''
+]]></failure>
+		</testcase>
+	</testsuite>
+</testsuites>

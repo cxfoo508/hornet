@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite errors="0" failures="0" file=".py" name="Mytest-20220914135337" skipped="0" tests="3" time="1.796" timestamp="2022-09-14T13:53:39">
+		<testcase classname="Mytest" file="tasks/task_running/test_case.py" line="15" name="test_api_1_娃娃" time="0.277" timestamp="2022-09-14T13:53:37">
+			<doc>
+<![CDATA[test_api_1_娃娃]]>			</doc>
+		</testcase>
+		<testcase classname="Mytest" file="tasks/task_running/test_case.py" line="15" name="test_api_2_你是___啊" time="0.450" timestamp="2022-09-14T13:53:38">
+			<doc>
+<![CDATA[test_api_2_你是___啊]]>			</doc>
+		</testcase>
+		<testcase classname="Mytest" file="tasks/task_running/test_case.py" line="15" name="test_api_3_123123" time="1.069" timestamp="2022-09-14T13:53:39">
+			<doc>
+<![CDATA[test_api_3_123123]]>			</doc>
+		</testcase>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,20 @@
+{
+  "test_case": {
+    "url": "http://httpbin.org/post",
+    "method": "post",
+    "header": {},
+    "params_type": "json",
+    "params_body": {"hello":"world"},
+    "assert_type": "include",
+    "assert_text": "hello"
+  },
+  "test_case2": {
+    "url": "http://httpbin.org/post",
+    "method": "post",
+    "header": {},
+    "params_type": "params",
+    "params_body": {"hello":"world"},
+    "assert_type": "include",
+    "assert_text": "hello"
+  }
+}
