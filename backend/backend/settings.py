@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l%cj@q12)fklmwg4t_dxubn_%7bo7blp!y$)r12ov#64(3!r@&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'users',
     'cases',
     'projects',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -125,10 +128,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 项目上传文件
 IMAGE_DIR = os.path.join(BASE_DIR, "static", "images")
 
-
 # 设置静态目录
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+DEBUG_TOOLBAR_CONFIG = {
+
+    'SHOW_TOOLBAR_CALLBACK': lambda x: True,
+
+}
+INTERNAL_IPS = ['127.0.0.1', ]

@@ -1,0 +1,21 @@
+[[source]]
+url = "http://mirrors.aliyun.com/pypi/simple"
+verify_ssl = true
+name = "aliyun"
+
+[packages]
+setuptools = "57.5.0"
+asgiref = "==3.5.2"
+django = "==4.1.1"
+sqlparse = "==0.4.2"
+pipfile = "*"
+django-debug-toolbar = "*"
+django-ninja = "*"
+requests = "*"
+xtestrunner = "*"
+ddt = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

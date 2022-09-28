@@ -1,0 +1,17 @@
+version: '3'
+services:
+  fronted:
+    build: ./frontend
+    ports:
+      - "8080:8080"
+    networks:
+      - hornet
+  backend:
+    build: ./backend 
+    ports:
+      - "8000:8000"
+    networks:
+      - hornet
+networks:
+  hornet:
+  driver: bridge

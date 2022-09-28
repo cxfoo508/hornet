@@ -146,6 +146,9 @@ export default {
         }
       });
     },
+    testFunction(formName){
+      this.$refs
+    },
   },
 };
 </script>
