@@ -14,4 +14,4 @@ services:
       - hornet
 networks:
   hornet:
-  driver: bridge
+    driver: bridge
