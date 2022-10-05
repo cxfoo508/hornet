@@ -10,7 +10,7 @@ pipeline {
     }
     environment{
         GIT_URL='https://github.com/cxfoo508/hornet.git'
-        GIT_BRANCH='master'
+        BRANCH_NAME=env.BRANCH.NAME
     }
     stages {
         stage('GetCode') {
@@ -18,7 +18,8 @@ pipeline {
                 
                 timeout(time:5,unit:"MINUTES"){
                     script{
-                        sh 'echo ${env.BRANCH_NAME}'
+                      	sh 'echo ${BRANCH_NAME}'
+						sh 'docker-compose up -d'
 						
                     }
                 }
