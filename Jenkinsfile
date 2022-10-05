@@ -10,7 +10,7 @@ pipeline {
     }
     environment{
         GIT_URL='https://github.com/cxfoo508/hornet.git'
-        BRANCH_NAME=env.BRANCH.NAME
+        BRANCH_NAME='env.BRANCH.NAME'
     }
     stages {
         stage('GetCode') {
