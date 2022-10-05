@@ -18,7 +18,8 @@ pipeline {
                 
                 timeout(time:5,unit:"MINUTES"){
                     script{
-                        sh 'echo :'+env.GITNAME
+                        sh 'echo :'+env.BRANCH_NAME
+						
                     }
                 }
             }
