@@ -11,12 +11,11 @@ pipeline {
     stages {
         stage('GetCode') {
             steps {
-                
                 timeout(time:5,unit:"MINUTES"){
                     script{
-                      	echo "${env.BRANCH_NAME}"
-						pwd
-						ls
+                      	echo "123"
+						sh "pwd"
+						sh "ls"
                     }
                 }
             }
