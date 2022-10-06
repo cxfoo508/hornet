@@ -11,6 +11,7 @@ pipeline {
     stages {
         stage('GetCode') {
             steps {
+				git branch: '*/main', credentialsId: '123', url: 'https://github.com/cxfoo508/hornet.git'
                 timeout(time:5,unit:"MINUTES"){
                     script{
                       	echo "123"
