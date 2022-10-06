@@ -8,8 +8,6 @@ pipeline {
         disableConcurrentBuilds()
         timeout(time:1,unit:'HOURS')
     }
-    environment{
-    }
     stages {
         stage('GetCode') {
             steps {
