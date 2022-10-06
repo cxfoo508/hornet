@@ -15,9 +15,8 @@ pipeline {
                 timeout(time:5,unit:"MINUTES"){
                     script{
                       	echo "${env.BRANCH_NAME}"
-						echo `pwd`
-						echo `ls`
-						
+						pwd
+						ls
                     }
                 }
             }
