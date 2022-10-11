@@ -15,7 +15,7 @@ pipeline {
                 }
             }
          //gou jian构建
-         stage('Build') {
+         stage('deploy') {
              steps {
                  timeout(time:20,unit:'MINUTES'){
                      script{
