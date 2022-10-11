@@ -19,6 +19,7 @@ pipeline {
              steps {
                  timeout(time:20,unit:'MINUTES'){
                      script{
+
                         sh "docker-compose down --rmi all"
 						sh "sh clear_iamges.sh"
 						sh "docker-compose up -d"
