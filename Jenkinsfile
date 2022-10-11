@@ -12,23 +12,20 @@ pipeline {
         stage('GetCode') {
             steps {
 				git branch: 'main', credentialsId: '123', url: 'https://github.com/cxfoo508/hornet.git'
-                timeout(time:5,unit:"MINUTES"){
-                    script{
-                    	sh "docker-compose up -d"
-					}
                 }
             }
         }
-        // //gou jian构建
-        // stage('Build') {
-        //     steps {
-        //         timeout(time:20,unit:'MINUTES'){
-        //             script{
-        //                 println('构建代码')
-        //             }
-        //         }
-        //     }
-        // }
+         //gou jian构建
+         stage('Build') {
+             steps {
+                 timeout(time:20,unit:'MINUTES'){
+                     script{
+                        sh "docker-compose down --rmi all && sh ~/clear_iamges.sh"
+						sh "docker-compose up -d"
+                     }
+                 }
+             }
+         }
         // //test
         // stage('Test') {
         //     steps {
