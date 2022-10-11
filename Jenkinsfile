@@ -26,7 +26,7 @@ pipeline {
                  }
              }
          }
-        // //test
+        //test
         // stage('Test') {
         //     steps {
         //         timeout(time:20,unit:'MINUTES'){
