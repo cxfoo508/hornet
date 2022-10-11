@@ -14,7 +14,6 @@ pipeline {
 				git branch: 'main', credentialsId: '123', url: 'https://github.com/cxfoo508/hornet.git'
                 }
             }
-        }
          //gou jian构建
          stage('Build') {
              steps {
