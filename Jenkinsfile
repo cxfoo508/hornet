@@ -15,7 +15,7 @@ pipeline {
              steps {
                  timeout(time:20,unit:'MINUTES'){
                      script{
-                    	println(env.BRANCH_NAME) 
+                    	println("分支名称："+env.BRANCH_NAME) 
 	
 					}
                  }
