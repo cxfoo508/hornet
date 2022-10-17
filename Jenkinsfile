@@ -25,6 +25,7 @@ pipeline {
                     		 sh "echo BUILD_NUMBER : ${env.BUILD_NUMBER}"
                     		 sh "echo JOB_NAME : ${env.JOB_NAME}"
 							 sh "echo job:${env.PROJECT}"
+							 sh "ls"
 						}
 	
 					}
