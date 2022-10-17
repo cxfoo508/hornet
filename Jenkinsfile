@@ -17,10 +17,14 @@ pipeline {
                      script{
                     	sh "ls"
 						if(env.BRANCH_NAME=="main"){
-							sh "docker-compose down --rmi all"
-							sh "sh clear_iamges.sh"
-							sh "docker-compose up -d"
-
+							 sh "echo 当前分支 : ${env.BRANCH_NAME}"
+                    		 sh "echo 当前环境 : ${env.env}"
+                    		 sh "echo 当前提交 : ${env.commit}"
+                    		 sh "echo WORKSPACE : ${env.WORKSPACE}"
+                    		 sh "echo GIT_BRANCH : ${env.GIT_BRANCH}"
+                    		 sh "echo BUILD_NUMBER : ${env.BUILD_NUMBER}"
+                    		 sh "echo JOB_NAME : ${env.JOB_NAME}"
+							 sh "echo job:${env.PROJECT}"
 						}
 	
 					}
