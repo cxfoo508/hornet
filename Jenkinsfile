@@ -16,7 +16,12 @@ pipeline {
                  timeout(time:20,unit:'MINUTES'){
                      script{
                     	sh "ls"
-						println("分支名称："+env.BRANCH_NAME) 
+						if(env.BRANCH_NAME=="main"){
+							sh "docker-compose down --rmi all"
+							sh "sh clear_iamges.sh"
+							sh "docker-compose up -d"
+
+						}
 	
 					}
                  }
