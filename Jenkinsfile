@@ -16,6 +16,7 @@ pipeline {
                  timeout(time:20,unit:'MINUTES'){
                      script{
                     	sh "ls"
+
 						if(env.BRANCH_NAME=="main"){
 							 sh "echo 当前分支 : ${env.BRANCH_NAME}"
                     		 sh "echo 当前环境 : ${env.env}"
