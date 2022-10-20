@@ -13,7 +13,7 @@ module.exports = {
         proxy: {
             "/api": {
                 // 配置到接口包含api使用该代理
-                target: "http://backend:8000/api", // 定义后端的接口
+                target: "http://hornet:8000/api", // 定义后端的接口
                 changeOrigin: true,
                 ws: true,
                 pathRewrite: {
@@ -21,7 +21,7 @@ module.exports = {
                 },
             },
             static: {
-                target: "http://backend:8000/static", // 定义后端的接口
+                target: "http://hornet:8000/static", // 定义后端的接口
                 changeOrigin: true,
                 ws: true,
                 pathRewrite: {
